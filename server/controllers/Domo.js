@@ -27,7 +27,7 @@ const makeDomo = (req, res) => {
   const domoData = {
     name: req.body.name,
     age: req.body.age,
-	health: req.body.health,
+    health: req.body.health,
     owner: req.session.account._id,
   };
 
@@ -71,9 +71,9 @@ const getDomos = (request, response) => {
   const res = response;
 
   return Domo.DomoModel.findByOwner(req.session.account._id, (err, docs) => {
-    if(err) {
+    if (err) {
       console.log(err);
-      return res.status(400).json({ error: 'An error occurred'});
+      return res.status(400).json({ error: 'An error occurred' });
     }
 
     return res.json({ domos: docs });
@@ -81,17 +81,17 @@ const getDomos = (request, response) => {
 };
 
 const removeDomo = (request, response) => {
-    const req = request;
-    const res = response;
+  const req = request;
+  const res = response;
 
-    return Domo.DomoModel.removeById(req.body._id, (err, docs) => {
-        if (err) {
-          console.log(err);
-          return res.status(400).json({ error: 'An error occurred' });
-        }
+  return Domo.DomoModel.removeById(req.body._id, (err, docs) => {
+    if (err) {
+      console.log(err);
+      return res.status(400).json({ error: 'An error occurred' });
+    }
 
-        return res.json({ domos: docs });
-    });
+    return res.json({ domos: docs });
+  });
 };
 
 module.exports.makerPage = makerPage;

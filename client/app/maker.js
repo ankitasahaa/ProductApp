@@ -27,11 +27,11 @@ const DomoForm = (props) =>{
         method='POST'
         className="domoForm"
     >
-    <label htmlFor="name">Name: </label>
+    <label htmlFor="name">Destination Name: </label>
     <input id="domoName" type="text" name="name" placeholder="Domo Name" />
-    <label htmlFor="age">Age: </label>
+    <label htmlFor="age">Country: </label>
     <input id="domoAge" type="text" name="age" placeholder="Domo Age" />
-	<label htmlFor="health">Health: </label>
+	<label htmlFor="health">Notes: </label>
     <input id="domoHealth" type="text" name="health" placeholder="Domo Health" />
     <input id="csrfToken" type="hidden" name="_csrf" value={props.csrf} />
     <input className="makeDomoSubmit" type="submit" value="Make Domo" />
@@ -43,7 +43,7 @@ const DomoList = function(props){
   if(props.domos.length === 0){
     return(
       <div className="domoList">
-        <h3 className="emptyDomo">No Domos Yet</h3>
+        <h3 className="emptyDomo">No Destinations Yet</h3>
       </div>
     );
   }
@@ -52,9 +52,9 @@ const DomoList = function(props){
     return(
       <div key={domo._id} className="domo">
         <img src="/assets/img/domoface.jpeg" alt="domo face" className="domoFace" />
-        <h3 className="domoName">Name: {domo.name}</h3>
-        <h3 className="domoAge">Age: {domo.age}</h3>     
-		<h3 className="domoHealth">Health: {domo.health}</h3>
+        <h3 className="domoName">Destination City: {domo.name}</h3>
+        <h3 className="domoAge">Country: {domo.age}</h3>     
+		<h3 className="domoHealth">Notes: {domo.health}</h3>
       </div>
     );
   });

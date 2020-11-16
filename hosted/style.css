@@ -4,6 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+	background-color: #595F72;
 }
 
 #logo {
@@ -17,7 +18,7 @@ html, body {
 nav {
     width: 100%;
     height: 50px;
-    background-color: #55acee;
+    background-color: #84A07C;
 }
 
 nav:nth-child(1) {
@@ -38,7 +39,7 @@ nav:nth-child(1) {
     text-decoration: none;
     padding: 5px;
     border-radius: 4px;
-    background-color: #55acee;
+    background-color: #84A07C;
     transition: background-color 0.4s ease;
 }
 
@@ -47,20 +48,27 @@ nav:nth-child(1) {
     background-color: #66bdff;
 }
 
+.intro {
+	
+}
+
+.indent {float: left;}
+.indent section {width: 50%; float: left;}
+
 .domoForm {
-    border: 2px solid #338acc;
-    height: 35px;
-    width: 700px;
-    margin-top:0px;
+    height: 400px;
+    width: 500px;
+    margin-top:5px;
+	margin-left:5px;
     padding-top:10px;
-    background-color: #55acee;
+    background-color: #84A07C;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
 }
 
 .domoForm label {
-    display: inline-block;
-    width: 75px;
+    display: block;
+    width: 150px;
     margin-left: 10px;
     font-size: 1.2em;
     float: left;
@@ -69,13 +77,14 @@ nav:nth-child(1) {
 
 .domoForm input[type=text] {
     float:left;
+	width: 200px;
 }
 
 .makeDomoSubmit {
     transition: background-color 0.4s ease;
-    display: inline;
+    display: block;
     width: 90px;
-    background-color: #55acee;
+    background-color: #84A07C;
     border-radius: 2px;
     color: white;
     text-decoration: none;
@@ -118,7 +127,7 @@ nav:nth-child(1) {
     margin-top: 14px;
     font-size: 1.2em;
     width: 100px;
-    background-color: #55acee;
+    background-color: #84A07C;
     border-radius: 2px;
     border-color: #66acee;
     padding: 3px 0px;
@@ -144,7 +153,7 @@ nav:nth-child(1) {
 
 #user:focus, #pass:focus, #pass2:focus {
     outline: none;
-    box-shadow: 0px 0px 1px 1px #55acee;
+    box-shadow: 0px 0px 1px 1px #84A07C;
 }
 
 #domoMessage {
@@ -192,20 +201,19 @@ nav:nth-child(1) {
 #domos {
     width: 40%;
     min-width: 400px;
-    border: 2px solid #55acee;
+    border: 2px solid #5D7656;
     border-radius: 4px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 5px;
 }
 
 .domo {
     width: 95%;
     margin: 0 auto;
-    margin-top: 2px;
     margin-bottom: 2px;
-    border: 2px solid #55acee;
+    border: 2px solid #84A07C;
     border-radius: 4px;
-    background-color: #55acee;
+    background-color: #84A07C;
     padding: 10px;
     min-height:60px;
     overflow: hidden;
@@ -245,18 +253,17 @@ h3.domoName {
 }
 
 h3.domoAge {
-    float:right;
-    text-align: left;
-    width: 100px;
+    float:left;
+    width: 200px;
     font-weight: bold;
-    padding-right: 40px;
+    padding-left: 65px;
     font-size: 1.5em;
 }
 
-.domo:first-child {
-    margin-top: 10px;
-}
-
-.domo:last-child {
-    margin-bottom:10px;
+h3.domoHealth {
+    float:left;
+    width: 200px;
+    font-weight: bold;
+    padding-left: 65px;
+    font-size: 1.5em;
 }

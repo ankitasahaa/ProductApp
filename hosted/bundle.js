@@ -29,25 +29,25 @@ var DomoForm = function DomoForm(props) {
     className: "domoForm"
   }, /*#__PURE__*/React.createElement("label", {
     htmlFor: "name"
-  }, "Name: "), /*#__PURE__*/React.createElement("input", {
+  }, "Destination City: "), /*#__PURE__*/React.createElement("input", {
     id: "domoName",
     type: "text",
     name: "name",
-    placeholder: "Domo Name"
+    placeholder: "City Name"
   }), /*#__PURE__*/React.createElement("label", {
     htmlFor: "age"
-  }, "Age: "), /*#__PURE__*/React.createElement("input", {
+  }, "Country: "), /*#__PURE__*/React.createElement("input", {
     id: "domoAge",
     type: "text",
     name: "age",
-    placeholder: "Domo Age"
+    placeholder: "Country"
   }), /*#__PURE__*/React.createElement("label", {
     htmlFor: "health"
-  }, "Health: "), /*#__PURE__*/React.createElement("input", {
+  }, "Notes: "), /*#__PURE__*/React.createElement("input", {
     id: "domoHealth",
     type: "text",
     name: "health",
-    placeholder: "Domo Health"
+    placeholder: "Ex. 'better during summer'"
   }), /*#__PURE__*/React.createElement("input", {
     id: "csrfToken",
     type: "hidden",
@@ -66,24 +66,27 @@ var DomoList = function DomoList(props) {
       className: "domoList"
     }, /*#__PURE__*/React.createElement("h3", {
       className: "emptyDomo"
-    }, "No Domos Yet"));
+    }, "No Destinations Yet"));
   }
 
   var domoNodes = props.domos.map(function (domo) {
     return /*#__PURE__*/React.createElement("div", {
       key: domo._id,
       className: "domo"
-    }, /*#__PURE__*/React.createElement("img", {
-      src: "/assets/img/domoface.jpeg",
-      alt: "domo face",
-      className: "domoFace"
-    }), /*#__PURE__*/React.createElement("h3", {
+    }, //*#__PURE__*/React.createElement("img", {
+      //src: "/assets/img/domoface.jpeg",
+      //alt: "domo face",
+      //className: "domoFace"
+    /*}), /*#__PURE__*/React.createElement("h3", {
       className: "domoName"
-    }, "Name: ", domo.name), /*#__PURE__*/React.createElement("h3", {
+    }, "Destination City: ", domo.name), /*#__PURE__*/React.createElement("h3", {
       className: "domoAge"
-    }, "Age: ", domo.age), /*#__PURE__*/React.createElement("h3", {
+    }, "Country: ", domo.age), /*#__PURE__*/React.createElement("h3", {
       className: "domoHealth"
-    }, "Health: ", domo.health));
+    }, "Notes: ", domo.health)
+	
+	
+	);
   });
   return /*#__PURE__*/React.createElement("div", {
     className: "domoList"

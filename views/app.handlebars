@@ -9,19 +9,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
   <link rel="shortcut icon" href="/assets/img/favicon.png"/>
   <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
   <nav><a href="/login"><img id="logo" src="/assets/img/face.png" alt="face logo"/></a>
     <div class="navlink"><a href="/logout">Log out</a></div>
 	<div class="navlink"><a href="/remove">Manager</a></div>
   </nav>
-  <section id="makeDomo">
-  </section>
-  <section id="domos">
-  </section>
+  <section class="indent">
+	<section id="makeDomo">
+	</section>
+	<section id="domos">
+	</section>
+	</section>
   <div id="domoMessage"><img id="speech" src="/assets/img/speech.png" alt="speech box"/>
     <h3><span id="errorMessage"></span></h3><img id="domo" src="assets/img/domo.png" alt="domo"/>
   </div>
+  <div id='map' style='width: 400px; height: 300px;'></div>
   <script src="/assets/bundle.js"></script>
 </body>
 </html>

@@ -19,15 +19,15 @@ const DomoSchema = new mongoose.Schema({
   },
 
   age: {
-    type: Number,
-    min: 0,
+    type: String,
     required: true,
+	trim: true,
   },
 
   health: {
-    type: Number,
-    min: 0,
+    type: String,
     required: true,
+	trim: true,
   },
 
   owner: {

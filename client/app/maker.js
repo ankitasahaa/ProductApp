@@ -28,11 +28,11 @@ const DomoForm = (props) =>{
         className="domoForm"
     >
     <label htmlFor="name">Destination Name: </label>
-    <input id="domoName" type="text" name="name" placeholder="Domo Name" />
+    <input id="domoName" type="text" name="name" placeholder="City" />
     <label htmlFor="age">Country: </label>
-    <input id="domoAge" type="text" name="age" placeholder="Domo Age" />
+    <input id="domoAge" type="text" name="age" placeholder="Country" />
 	<label htmlFor="health">Notes: </label>
-    <input id="domoHealth" type="text" name="health" placeholder="Domo Health" />
+    <input id="domoHealth" type="text" name="health" placeholder="Ex. 'better during summer'" />
     <input id="csrfToken" type="hidden" name="_csrf" value={props.csrf} />
     <input className="makeDomoSubmit" type="submit" value="Make Domo" />
   </form>
@@ -51,7 +51,6 @@ const DomoList = function(props){
   const domoNodes = props.domos.map(function(domo){
     return(
       <div key={domo._id} className="domo">
-        <img src="/assets/img/domoface.jpeg" alt="domo face" className="domoFace" />
         <h3 className="domoName">Destination City: {domo.name}</h3>
         <h3 className="domoAge">Country: {domo.age}</h3>     
 		<h3 className="domoHealth">Notes: {domo.health}</h3>
